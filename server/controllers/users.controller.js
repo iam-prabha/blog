@@ -69,7 +69,5 @@ export const logout = (_req, res) => {
 };
 
 export const getMe = async (req, res) => {
-    const { _id, email } = await User.findById(req.userId);
-
-    return res.send(`you logged in : ${email}`)
+    return res.send(`you are logged in  : ${req.userId}`)
 };
